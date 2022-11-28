@@ -1,19 +1,48 @@
-const front = frontEndJobs;
+// {
+/* <section class="jobs__container">
+
+<div class="jobs__card">
+  <div class="jobs__card__title">
+    <div class="jobs__card--icon">
+      <h1>G</h1>
+    </div>
+
+    <div class="jobs__card--title2">
+      <h1>Desenvolvedor Frontend</h1>
+      <h3>Curitiba - Paraná</h3>
+    </div>
+  </div>
+
+  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+    Latin
+    literature from 45 BC, making it over 2000
+  </p>
+
+  <div class="jobs__card--cargaHoraria">
+    <div id = "ModoTime">
+      <span>Full Time</span>
+    </div>
+
+    <div id = "ModoType">
+      <span>Remote</span>
+    </div>
+  </div>
+
+</div>
+
+</section> */
+// }
 const back = backEndJobs;
+const front = frontEndJobs;
 
 function createcard(jobs, iconLetter) {
-  const divBox = document.querySelector(".jobs__Box");
   const section = document.createElement("section");
-
-  divBox.appendChild(section);
 
   for (let i = 0; i < jobs.length; i++) {
     console.log(jobs[i]);
 
     let main = document.querySelector("main");
     let iconTitle = iconLetter;
-
-    // let cardTitlle = document.createElement("h1");
 
     const jobsCard = document.createElement("div");
     const jobsCardTitle = document.createElement("div");
@@ -34,10 +63,6 @@ function createcard(jobs, iconLetter) {
     const jobsCardCargaHora2 = document.createElement("div");
     const jobsCardCargaSpan2 = document.createElement("span");
 
-    // cardTitlle.id = "Jobs";
-    // cardTitlle.classList.add("jobs__card--title");
-    // cardTitlle.innerText = jobsTitle;
-
     section.classList.add("jobs__container");
 
     jobsCard.classList.add("jobs__card");
@@ -49,6 +74,7 @@ function createcard(jobs, iconLetter) {
 
     jobsCardCargaHora.classList.add("jobs__card--cargaHoraria");
 
+    main.append(section);
     section.appendChild(jobsCard);
     jobsCard.append(jobsCardTitle, parag, jobsCardCargaHora);
     jobsCardTitle.append(jobsCardIcon, jobsCardTitle2, titleH1);
@@ -73,17 +99,26 @@ function createcard(jobs, iconLetter) {
   }
 }
 
-function mostrarCars(jobs, jobsTitle, iconLetter) {
-  let divBox = document.querySelector("#jobsBox");
-  let cardTitle = document.createElement("h1");
+// function frontCards(jobs, jobsTitle, iconLetter) {
+//   let cardTitlle = document.querySelector("#JobsFront");
 
-  cardTitle.id = "Jobs";
-  cardTitle.classList.add("jobs__card--title");
-  cardTitle.innerText = jobsTitle;
+//   cardTitlle.id = "#JobsFront";
+//   cardTitlle.classList.add("jobs__card--title");
+//   cardTitlle.innerText = jobsTitle;
 
-  divBox.appendChild(cardTitle);
+//   createcard(jobs, iconLetter);
+// }
+
+// frontCards(front, "Frontend Jobs", "G");
+
+function backCards(jobs, jobsTitle, iconLetter) {
+  let cardTitlle2 = document.querySelector("#JobsBack");
+
+  cardTitlle2.id = "#JobsBack";
+  cardTitlle2.classList.add("jobs__card--title");
+  cardTitlle2.innerText = jobsTitle;
+
   createcard(jobs, iconLetter);
 }
 
-mostrarCars(front, "Frontend Jobs", "G");
-mostrarCars(back, "Backend Jobs", "T");
+backCards(back, "Backend Jobs", "G");

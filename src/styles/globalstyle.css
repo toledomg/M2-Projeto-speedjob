@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --font-primary: font-family: "Inter", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+  --color-primary: #212529;
+  --color-secondary: #E9ECEF;
+  --color-grey: #5e666f;
+  --color-two: #ffffff;
+  --color-bg-tags: rgba(77, 82, 211, 0.1);
+  --color-text-tags: #4D52D3
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+height: 6px;
+}   
+
+::-webkit-scrollbar-thumb {
+  background-color:  rgba(77, 82, 211, 0.08);
+  border-radius: 20px;
+}
