@@ -173,7 +173,8 @@ header > nav > ul > li {
 }
 
 .copyright {
-  margin: 40px 0;
+  text-align: center;
+  margin: 40px 20px;
   display: flex;
   justify-content: center;
   align-itens: center;
