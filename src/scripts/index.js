@@ -8,12 +8,10 @@ function createcard(jobs, iconLetter) {
   divBox.appendChild(section);
 
   for (let i = 0; i < jobs.length; i++) {
-    console.log(jobs[i]);
+    // console.log(jobs[i]);
 
     let main = document.querySelector("main");
     let iconTitle = iconLetter;
-
-    // let cardTitlle = document.createElement("h1");
 
     const jobsCard = document.createElement("div");
     const jobsCardTitle = document.createElement("div");
@@ -33,10 +31,6 @@ function createcard(jobs, iconLetter) {
 
     const jobsCardCargaHora2 = document.createElement("div");
     const jobsCardCargaSpan2 = document.createElement("span");
-
-    // cardTitlle.id = "Jobs";
-    // cardTitlle.classList.add("jobs__card--title");
-    // cardTitlle.innerText = jobsTitle;
 
     section.classList.add("jobs__container");
 
