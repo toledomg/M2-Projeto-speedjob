@@ -22,26 +22,38 @@ Cor do texto das tags: #4D52D3
 }
 
 :root {
-  font-family: "Inter", sans-serif;
+  --font-primary: font-family: "Inter", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
 }
 
 body {
+  
   background-color: #e9ecef;
+  font-family: var(--font-primary);
+
 }
 
-header {
+.header__container {
   height: 422px;
+  width: 100vw;
   background-color: #212529;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-secondary);
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  /* border-top-left-radius: 8px;
-  border-top-right-radius: 8px; */
+  /* position: fixed;
+  top: 0; */
+
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  z-index: 999;
 }
 
-header > h1 {
+.header__container > h1 {
   color: #ffffff;
   font-size: 36px;
   font-weight: 600;
@@ -51,10 +63,10 @@ header > h1 {
   margin-bottom: 24px;
 }
 
-header > h1 > span {
+.header__container > h1 > span {
   color: #484ffb;
 }
-header > h3 {
+.header__container > h3 {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
@@ -64,7 +76,7 @@ header > h3 {
   margin-bottom: 51px;
 }
 
-header > nav > ul > li {
+.header__container > nav > ul > li {
   list-style: none;
   color: #ffffff;
   border: 2px #ffffff solid;
@@ -73,14 +85,34 @@ header > nav > ul > li {
   margin-bottom: 20px;
 }
 
+main {
+  /* position: relative; */
+}
+
+.jobs__Box {
+  /* position: absolute;
+  top: 422px; */
+
+
+}
+
 .jobs__container {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: start;
-  flex-wrap: wrap;
-  /* justify-content: center; */
+  
   margin-left: 20px;
   gap: 16px;
+
+  overflow-x: auto;
+}
+
+.jobs__card {
+  width: 347px;
+  height: 240px;
+  min-width: 347px;
+
+  background-color: #ffffff;
+  border-radius: 8px;
 }
 
 .jobs__card--title {
@@ -91,14 +123,7 @@ header > nav > ul > li {
   margin: 44px 20px;
 }
 
-.jobs__container > div {
-  width: 347px;
-  height: 240px;
-  min-width: 347px;
 
-  background-color: #ffffff;
-  border-radius: 8px;
-}
 
 .jobs__card__title {
   display: flex;
@@ -172,12 +197,14 @@ header > nav > ul > li {
   color: #4d52d3;
 }
 
-.copyright {
+ .copyright {
   text-align: center;
-  margin: 40px 20px;
   display: flex;
   justify-content: center;
   align-itens: center;
+
+  margin: 20px 0;
+
 }
 
 .copyright span {
@@ -193,4 +220,5 @@ header > nav > ul > li {
 
 .copyright a:hover {
   color: #4d52d3;
-}
+} 
+
